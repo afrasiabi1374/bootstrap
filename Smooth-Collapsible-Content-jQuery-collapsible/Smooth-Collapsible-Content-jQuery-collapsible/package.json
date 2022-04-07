@@ -1,0 +1,25 @@
+{
+  "name": "jQuery-Collapsible",
+  "version": "0.0.1",
+  "description": "jQuery plugin that creates interactive rating icons",
+  "main": "bundle.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cam Tullos cam@tullos.ninja",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "browser-sync": "^2.16.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-minify": "0.0.14",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/camdagr8/jquery-collapsible.git"
+  }
+}

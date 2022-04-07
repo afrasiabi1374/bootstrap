@@ -1,0 +1,1072 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="BS4/css/bootstrap431.min.css">
+    <link href="hospital.css" rel="stylesheet" type="text/css">
+    <script src="BS4/js/jquery.min.js"></script>
+    <script src="BS4/js/popper.min.js"></script>
+    <script src="BS4/js/bootstrap.min.js"></script>
+    
+
+    
+    
+
+
+
+
+    
+
+
+    
+    <title>Untitled Document</title>
+
+    
+
+    
+   <style>
+    
+    
+    
+    ul { list-style: none; }
+a { text-decoration: none; color: black;}
+
+#menu-wrapper {
+    
+    max-width: 100%;
+    cursor: pointer;
+}
+
+
+#menu-wrapper #hamburger-menu {
+    position: relative;
+    width: 25px;
+    height: 20px;
+    margin: 15px;
+}
+
+#menu-wrapper #hamburger-menu span {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+}
+
+#menu-wrapper #hamburger-menu span:nth-child(1) {
+    top: 0;
+}
+#menu-wrapper #hamburger-menu span:nth-child(2) {
+    top: 9px;
+}
+#menu-wrapper #hamburger-menu span:nth-child(3) {
+    top: 18px;
+}
+#menu-wrapper #hamburger-menu.open span:nth-child(1) {
+    top: 9px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+#menu-wrapper #hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    left: -60px;
+}
+#menu-wrapper #hamburger-menu.open span:nth-child(3) {
+    top: 9px;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+#menu-container .menu-list .menu-submenu {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#menu-container .menu-list {
+    padding-left: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    box-shadow: rgba(100,100,100,0.2) 6px 2px 10px;
+    z-index: 999;
+    overflow-y: auto;
+    overflow-x: hidden;
+   
+}
+
+#menu-container .menu-list li.accordion-toggle, #menu-container .menu-list .menu-login {
+    font-size: 16px;
+    padding: 20px;
+    text-transform: uppercase;
+    border-top: 1px solid #dbdcd2;
+}
+#menu-container .menu-list li:first-of-type {
+    border-top: 0;
+}
+
+.accordion-toggle, .accordion-content {
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+  .accordion-content {
+    display: none;
+}
+
+.accordion-toggle a:before, .accordion-toggle a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    width: 15px;
+    height: 2px;
+    margin-top: -1px;
+    background-color: #5a5858;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s ease-out;
+}
+
+.accordion-toggle a:before {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 1;
+    z-index: 2;
+}
+
+.accordion-toggle.active-tab {
+  background: yellowgreen;
+  transition: all 0.3s ease;
+}
+.accordion-toggle a.active:before {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background: #fff !important;
+}
+
+.accordion-toggle a.active:after {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background: #fff !important;
+    opacity: 0;
+}
+    
+    
+    
+    
+    
+    </style>
+</head>
+
+<body class="position-relative">
+    <div class="container-fluid d-none d-md-block ">
+        <div class="row mt-3">
+            <div class="col-md-4">
+              <p class="font-weight-bold" style="font-size:1.3em;">Health <span class="text-success font-weight-bolder" style="font-size:.9em;"><em class="fas fa-plus" style="color:rgba(0,216,172,1.00);"></em></span></p>
+            </div>
+            <div class="col-md-8 ">
+
+                <div class="float-right">
+                    <ul class="d-inline-flex  mr-4">
+
+                        <li class="d-inline-block "><a href="#"><small class="text-muted">Help Desk<small class="text-muted p-1">&#124;</small></small></a></li>
+
+                        <li class="d-inline-block"><a href="#"><small class="text-muted">Emergency services<small class="text-muted p-1">&#124;</small></small></a></li>
+
+                        <li class="d-inline-block"><a href="#"><small class="text-muted">Appointment</small></a></li>
+
+                    </ul>
+                    <i class="fas fa-phone-volume text-success"></i>+34 586 778 8892
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <nav class="navbar navbar-expand  d-none d-md-flex justify-content-center align-content-center top-navi" style="background-color:rgba(0,216,172,1.00);color: white;">
+        <!--Brand-->
+
+        <!--Humburger Icon-->
+
+        <!--Menu Items-->
+
+        <ul class="navbar-nav mr-auto ">
+            <li class="nav-item ">
+                <a href="#" class="nav-link text-white ">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white">ABOUT US</a>
+            </li>
+            <li class="nav-item ">
+                <a href="#" class="nav-link text-white" data-toggle="">SERVICES</a>
+
+
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white">NEWS</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white">CONTACT</a>
+            </li>
+
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0" action="#">
+            <input type="text" class="form-control mr-sm-2" placeholder="Search">
+
+        </form>
+
+
+
+
+
+    </nav>
+    <div class="container-fluid" style="" id="bg-txt-1">
+
+
+        <div class="" id="txt-head">
+            <p class="display-4" style="color: aliceblue;">Medical Services that you can trust</p>
+            <p style="color: aliceblue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex eligendi nihil, enim sed iste dolore neque totam harum consectetur? Reiciendis quae quo fugiat aut provident aliquam cupiditate qui explicabo nihil.</p>
+            <a href="#" class="btn" style="background-color:rgba(0,216,172,1.00) ;color: aliceblue;">READ MORE</a>
+        </div>
+
+
+
+
+
+
+
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light  d-md-none " style="background-color:rgba(0,216,172,1.00);color: white;">
+        <!--Brand-->
+        <a href="#" class="navbar-brand">
+
+        </a>
+        <!--Humburger Icon-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Menu Items-->
+        <div id="myContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto ">
+                <li class="nav-item ">
+                    <a href="#" class="nav-link text-white ">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white">ABOUT US</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="#" class="nav-link text-white" data-toggle="">SERVICES</a>
+
+
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white">CONTACT</a>
+                </li>
+
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0" action="#">
+                <input type="text" class="form-control mr-sm-2" placeholder="Search">
+
+            </form>
+        </div>
+
+
+
+
+    </nav>
+
+    <div class="container" id="txt-img2">
+        <div class="row">
+            <div class="col-md-4 ">
+
+
+                <div class="card mt-3">
+                    <img src="Project/images/info_1.jpg" alt="" style="width: 100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Free Consulations</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos deserunt necessitatibus error molestias.</p>
+                        <a href="#" class="btn text-white">Read more</a>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+            <div class="col-md-4 ">
+
+                <div class="card mt-3">
+                    <img src="Project/images/info_2.jpg" alt="" style="width: 100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Emergengy Care</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos deserunt necessitatibus error molestias.</p>
+                        <a href="#" class="btn text-white">Read more</a>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-md-4 ">
+
+                <div class="card mt-3" style="height: 100%;">
+                    <div class="card-body">
+                        <h3 class="text-center">Make an Appointment</h3>
+                        <div class="form-container">
+                            <form action="" class="" id="department-form">
+
+                                <select name="" id="department" class="form-control">
+                                    <option value="Department">Department</option>
+
+                                </select>
+                                <br>
+                                <select name="" id="department" class="form-control">
+                                    <option value="Doctor">Doctor</option>
+
+                                </select>
+                                <br>
+                                <input type="text" placeholder="Name" id="department" class="form-control">
+                                <br>
+                                <input type="text" placeholder="Phone NO" id="department" class="form-control">
+
+                                <div class="btn">MAKE AN APPOINTMENT</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid pb-5" id="txt-img3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 " id="txt-img3-heads">
+                    <h2>Out Services</h2>
+                    <small class="text-muted">too choose from</small>
+                </div>
+            </div>
+            <div class="row" style="text-align: center;">
+
+                <div class="col-md-4  p-4 text-left text-md-center">
+                    <h5 class="ml-3"><img src="Project/images/icon_1.svg " alt="" width="50" class="position-relative" style="right: 6%">Cardiology</h5>
+                    <p class="text-img3-pre"><small class="text-muted">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipisicing elit. Cum doloremque voluptate, dolorem obcaecati molestias
+                            looph moop maxi</small></p>
+
+                </div>
+                <div class="col-md-4  p-4 text-left text-md-center">
+                    <h5 class="ml-3"><img src="Project/images/icon_2.svg" alt="" width="50" class="position-relative" style="right: 6%">Gastronentrology</h5>
+                    <p class="text-img3-pre"><small class="text-muted">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipisicing elit. Cum doloremque voluptate, dolorem obcaecati molestias
+                            looph moop maxi</small></p>
+
+                </div>
+                <div class="col-md-4  p-4 text-left text-md-center">
+
+                    <h5 class="ml-3"><img src="Project/images/icon_3.svg" alt="" width="50" class="position-relative" style="right: 6%">Medical Lab</h5>
+                    <p class="text-img3-pre"><small class="text-muted">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipisicing elit. Cum doloremque voluptate, dolorem obcaecati molestias
+                            looph moop maxi</small></p>
+
+                </div>
+
+
+            </div>
+
+            <div class="row" style="text-align: center;">
+
+                <div class="col-md-4  p-4 text-left text-md-center">
+                    <h5 class="ml-3"><img src="Project/images/icon_4.svg" alt="" width="50" class="position-relative" style="right: 6%">Dental Care</h5>
+                    <p class="text-img3-pre"><small class="text-muted">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipisicing elit. Cum doloremque voluptate, dolorem obcaecati molestias
+                            looph moop maxi</small></p>
+
+                </div>
+                <div class="col-md-4  p-4 text-left text-md-center">
+                    <h5 class="ml-3"><img src="Project/images/icon_5.svg" alt="" width="50" class="position-relative" style="right: 6%">Sugary</h5>
+                    <p class="text-img3-pre"><small class="text-muted">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipisicing elit. Cum doloremque voluptate, dolorem obcaecati molestias
+                            looph moop maxi</small></p>
+
+                </div>
+                <div class="col-md-4  p-4 text-left text-md-center">
+
+                    <h5 class="ml-3"><img src="Project/images/icon_6.svg" alt="" width="50" class="position-relative" style="right: 6%">Neurology</h5>
+                    <p class="text-img3-pre"><small class="text-muted">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipisicing elit. Cum doloremque voluptate, dolorem obcaecati molestias
+                            looph moop maxi</small></p>
+
+                </div>
+
+
+            </div>
+            <div class="row">
+
+                <div class="col-md-12" id="txt-img-3-btn-container">
+
+                    <a href="" class="btn mt-4" id="txt-img-3-btn">READ MORE</a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="container mt-4">
+
+
+        <div class="carou-head">
+            <h3>Our Departments</h3>
+
+            <p><small class="text-muted">TO CHOOSE FROM</small></p>
+
+        </div>
+
+
+
+    </div>
+
+
+    <div class="container">
+
+        <!-- Set up your HTML -->
+
+        <div class="owl-carousel">
+            <div>
+
+
+                <div class="card">
+                    <img src="Project/images/dept_2.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Dentisty</h4>
+                        <p class="card-text"><small class="text-muted">Lorem ipsum </small></p>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <div>
+
+
+                <div class="card">
+                    <img src="Project/images/dept_3.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Orthopedics</h4>
+                        <p class="card-text"><small class="text-muted">Lorem ipsum </small></p>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div>
+
+
+                <div class="card">
+                    <img src="Project/images/dept_4.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Laboratory</h4>
+                        <p class="card-text"><small class="text-muted">Lorem ipsum </small></p>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div>
+
+
+                <div class="card">
+                    <img src="Project/images/dept_1.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Baby visit</h4>
+                        <p class="card-text"><small class="text-muted">Lorem ipsum </small></p>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            
+            
+            
+            
+                        <div>
+
+
+                <div class="card">
+                    <img src="Project/images/dept_2.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Dentisty</h4>
+                        <p class="card-text"><small class="text-muted">Lorem ipsum </small></p>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            
+            
+            
+            
+                        <div>
+
+
+                <div class="card">
+                    <img src="Project/images/dept_3.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Orthopedics</h4>
+                        <p class="card-text"><small class="text-muted">Lorem ipsum </small></p>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            
+            
+            
+            
+                        <div>
+
+
+                <div class="card">
+                    <img src="Project/images/dept_4.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Baby visit</h4>
+                        <p class="card-text"><small class="text-muted">Lorem ipsum </small></p>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            
+            
+            
+            
+                        <div>
+
+
+                <div class="card">
+                    <img src="Project/images/dept_1.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Bill Gates</h4>
+                        <p class="card-text"><small class="text-muted">Lorem ipsum </small></p>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <div class="container-fluid" id="txt-news">
+
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="head-margin">
+                    <h3>Fraq &amp; Stuff</h3>
+                    <p><small class="text-muted">READ ALL ABOUT IT</small></p>
+                </div>
+
+
+
+                
+                
+         
+
+              <div id="menu-container">
+   <div id="menu-wrapper">
+      
+      <!-- hamburger-menu -->
+   </div>
+   <!-- menu-wrapper -->
+   <ul class="menu-list accordion">
+     <li id="nav1" class="toggle accordion-toggle"> <span class="icon-plus"></span> <a class="menu-link" >Menu1</a> </li>
+     <!-- accordion-toggle -->
+      <ul class="menu-submenu accordion-content">
+         <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit quae natus, ratione dolor quas molestias maxime earum blanditiis.</p></li>
+
+      </ul>
+      <!-- menu-submenu accordon-content-->
+      <li id="nav2" class="toggle accordion-toggle"> 
+         <span class="icon-plus"></span>
+         <a class="menu-link" >Menu2</a>
+      </li>
+      <!-- accordion-toggle -->
+      <ul class="menu-submenu accordion-content">
+         <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit quae natus, ratione dolor quas molestias maxime earum blanditiis.</p></li>
+
+      </ul>
+      <!-- menu-submenu accordon-content-->
+      <li id="nav3" class="toggle accordion-toggle"> <span class="icon-plus"></span> <a class="menu-link">Menu3</a> </li>
+      <!-- accordion-toggle -->
+      <ul class="menu-submenu accordion-content">
+         <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit quae natus, ratione dolor quas molestias maxime earum blanditiis.</p></li>
+
+      </ul>
+      <!-- menu-submenu accordon-content-->
+   </ul>
+   <!-- menu-list accordion-->
+</div>
+<!-- menu-container -->
+
+
+
+
+                
+                
+                
+                
+                
+                
+                
+               
+
+            </div>
+
+
+            <div class="col-md-4 m-3" >
+                <div class="head-margin">
+                    <h3>Lastest News</h3>
+                    <p><small class="textmuted">READ ALL ABOUT IT</small></p>
+                </div>
+
+                <div class="row">
+                    <div class="" id="1stnews">
+                        <img src="Project/images/latest_1.jpg" alt="">
+
+                    </div>
+                    <div class="">
+                        <div class="text-margins ml-4">
+                            <h5 class="m-0">A simple blog post</h5>
+                            <small class="text-muted">by jane smith / april 25,1018</small>
+                            <p> <small class="small-commens">2 comments</small></p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="" id="1stnews">
+                        <img src="Project/images/latest_2.jpg" alt="">
+
+                    </div>
+                    <div class="">
+                        <div class="text-margins ml-4">
+                            <h6 class="m-0">A new way to see thinks in medicine</h6>
+                            <small class="text-muted">e blog postby jane smith / april 25,1018</small>
+                            <p> <small class="small-commens">2 comments</small></p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="row">
+                    <div class="" id="1stnews">
+                        <img src="Project/images/latest_3.jpg" alt="">
+
+                    </div>
+                    <div class="">
+                        <div class="text-margins ml-4">
+                            <h6 class="m-0">Why is Phrma industry so big?</h6>
+                            <small class="text-muted">by jane smith / april 25,1018</small>
+                            <p> <small class="small-commens">2 comments</small></p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+    <footer class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="m-5">
+                    <p class="font-weight-bold mt-5" style="font-size:1.3em;color: aliceblue;">Health <span class="text-success font-weight-bolder" style="font-size:.9em;"><em class="fas fa-plus"></em> </span></p>
+                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat totam quis, porro cum, ipsam dolore in officiis similique culpa saepe ad, molestias nisi? Rem ipsum voluptate quae, illo fugiat tempora.</p>
+
+                    <div class=" mt-5">
+                        <i class="fab fa-facebook-f text-white"></i>
+                        <i class="fab fa-twitter text-white ml-3"></i>
+                        <i class="fab fa-linkedin-in text-white ml-3"></i>
+                        <i class="fab fa-instagram text-white ml-3"></i>
+                    </div>
+
+                    <p class="mt-5"><small class="text-muted">copyright &copy;2019 all right reserved &#124; this <br>template is made with <i class="fas fa-heart"></i> by ali afrasiabi!</small></p>
+
+
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="m-5">
+                    <h5 class=" text-white">Quick Contact</h5>
+                    
+                    <form action="" class="form-inline row">
+                        
+                       <div class="col-md-6"> <input type="text" class="form-control myinput" style="background-color: gray;width: 100%;" placeholder="Name"></div>
+                      <div class="col-md-6">  <input type="email" class="form-control myinput ml-0 mt-3 mt-md-0" style="background-color: gray;width: 100%" placeholder="email"></div>
+                        <textarea class="form-control myinput mt-2 ml-3" placeholder="Massage" style="background-color: gray;color: aliceblue;width: 410px;height: 158px;"></textarea>
+
+                        <a href="" class="btn mt-3 text-white msg-btn ml-3">SEND MASSAGE</a>
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="col-md-3">
+
+
+                <div class="chart m-4 pb-5">
+                    <h6 class="text-white"> Opening Hovers</h6>
+                    <div class="row">
+                        <div class="col-6 text-white"><small>monday-Thusday</small></div>
+                        <div class="col-6 text-white"><small>8.00-19.00</small></div>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-6 text-white"><small>Friday</small></div>
+                        <div class="col-6 text-white"><small>8.00-10.30</small></div>
+
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-6 text-white"><small>saturday</small></div>
+                        <div class="col-6 text-white"><small>9.30-17.00</small></div>
+
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 text-white"><small>sunday</small></div>
+                        <div class="col-6 text-white"><small>9.30-15.00</small></div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+    </footer>
+    <div class="container-fluid "   style="background-color:black; ">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="nav navbar-nav ">
+                    <ul class="list-unstyled navbar ">
+                        <div class="card-deck ">
+                            <li class="nav-item ml-2 ml-md-5 "><a href="" class="text-white">HOME</a></li>
+                            <li class="nav-item ml-2 ml-md-5"><a href="" class="text-white">ABOUT US</a></li>
+                            <li class="nav-item ml-2 ml-md-5"><a href="" class="text-white">SERVICES</a></li>
+                            <li class="nav-item ml-2 ml-md-5"><a href="" class="text-white">NEWS</a></li>
+                            <li class="nav-item ml-2 ml-md-5"><a href="" class="text-white">CONTACT</a></li>
+                        </div>
+                    </ul>
+
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+            <div class="col-md-6">
+
+
+                <div class="float-md-right float-left mt-2 ">
+                    <div class="row">
+                        <ul class="mr-4">
+
+                   <li class="d-md-inline-block d-block"><a href="#"><small class="text-white">Help Desk<small class="text-white p-1 d-none d-md-inline-block" >&#124;</small></small></a></li>
+
+                           <li class="d-md-inline-block d-block"><a href="#"><small class="text-white">Emergency services</small></a></li>
+
+                           <li class="d-md-inline-block d-block"><a href="#"><small class="text-white"> <small class="text-white p-1 d-none d-md-inline-block" >&#124;</small>  Appointment</small></a></li>
+
+                            
+                              <p class="d-md-inline-block d-block mt-3 mt-md-0 text-success"> <em class="fas fa-phone-volume text-success "></em>+34 586 778 8892</p>
+                            
+                        </ul>
+                      
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!--    <div class="container-fluid d-flex justify-content-between align-items-center text-center" id="nav-footer">
+<div class="row">
+    <div class="col-md-6">
+        <ul class="ul-nav float-left" style="font-size: .8em;">
+            <li class="li-item "><a href="#" class="nav-link">HOME</a></li>
+            <li class="li-item "><a href="#" class="nav-link">ABOUT US</a></li>
+            <li class="li-item "><a href="#" class="nav-link">SERVICES</a></li>
+            <li class="li-item "><a href="#" class="nav-link">NEWS</a></li>
+            <li class="li-item "><a href="#" class="nav-link">CONTACT</a></li>
+
+
+
+
+        </ul>
+</div>
+<div class="col-md-6 float-lg-right" >
+        <div class="float-right">
+            <ul class="d-inline-flex  mr-4 small-link">
+
+                <li class="d-inline-block "><a href="#" style="color: lightslategray;"><small >Help Desk<small class=" p-1">&#124;</small></small></a></li>
+
+                <li class="d-inline-block"><a href="#" style="color: lightslategray;"><small >Emergency services<small class=" p-1">&#124;</small></small></a></li>
+
+                <li class="d-inline-block"><a href="#" style="color: lightslategray;"><small>Appointment</small></a></li>
+
+            </ul>
+            <i class="fas fa-phone-volume text-success" style="color: lightslategray;"></i>+34 586 778 8892
+
+        </div>
+</div>
+    </div>
+    </div>-->
+
+
+
+
+
+
+
+
+
+        <script src="OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+        <script src="OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".owl-carousel").owlCarousel();
+            });
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    600: {
+                        items: 3,
+                        nav: false
+                    },
+                    1000: {
+                        items: 5,
+                        nav: true,
+                        loop: false
+                    }
+                }
+            })
+
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                loop: true,
+                nav: true,
+                margin: 10,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    960: {
+                        items: 5
+                    },
+                    1200: {
+                        items: 6
+                    }
+                }
+            });
+            owl.on('mousewheel', '.owl-stage', function(e) {
+                if (e.deltaY > 0) {
+                    owl.trigger('next.owl');
+                } else {
+                    owl.trigger('prev.owl');
+                }
+                e.preventDefault();
+            });
+            
+            
+          
+            
+            
+            
+
+            
+            
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+$(function() {
+  function slideMenu() {
+    var activeState = $("#menu-container .menu-list").hasClass("active");
+    $("#menu-container .menu-list").animate({left: activeState ? "0%" : "-100%"}, 400);
+  }
+  $("#menu-wrapper").click(function(event) {
+    event.stopPropagation();
+    $("#hamburger-menu").toggleClass("open");
+    $("#menu-container .menu-list").toggleClass("active");
+    slideMenu();
+
+    $("body").toggleClass("overflow-hidden");
+  });
+
+  $(".menu-list").find(".accordion-toggle").click(function() {
+    $(this).next().toggleClass("open").slideToggle("fast");
+    $(this).toggleClass("active-tab").find(".menu-link").toggleClass("active");
+
+    $(".menu-list .accordion-content").not($(this).next()).slideUp("fast").removeClass("open");
+    $(".menu-list .accordion-toggle").not(jQuery(this)).removeClass("active-tab").find(".menu-link").removeClass("active");
+  });
+}); // jQuery load
+                         
+                                
+        
+</script>
+
+
+        
+        
+        
+        
+        
+        
+
+        </body>
+    
+    
+    </html>
